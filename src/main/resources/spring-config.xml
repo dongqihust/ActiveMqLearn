@@ -25,12 +25,12 @@
        </bean>
 
        <!--queue消息生产者 -->
-       <bean id="producerService" class="ProducerServiceImpl">
+       <bean id="producerService" class="com.activeMQ.ProducerServiceImpl">
               <property name="jmsTemplate" ref="jmsTemplate"></property>
        </bean>
 
        <!--queue消息消费者 -->
-       <bean id="consumerService" class="ConsumerServiceImpl">
+       <bean id="consumerService" class="com.activeMQ.ConsumerServiceImpl">
               <property name="jmsTemplate" ref="jmsTemplate"></property>
        </bean>
 
@@ -44,7 +44,7 @@
        </bean>
 
        <!-- 配置消息队列监听者（Queue），代码下面给出，只有一个onMessage方法 -->
-       <bean id="queueMessageListener" class="QueueMessageListener" />
+       <bean id="queueMessageListener" class="com.activeMQ.QueueMessageListener" />
 
        <!-- 消息监听容器（Queue），配置连接工厂，监听的队列是queue2，监听器是上面定义的监听器 -->
        <bean id="jmsContainer"
@@ -69,12 +69,12 @@
        </bean>
 
        <!--topic消息发布者 -->
-       <bean id="topicProvider" class="TopicProvider">
+       <bean id="topicProvider" class="com.activeMQ.TopicProvider">
               <property name="topicJmsTemplate" ref="topicJmsTemplate"></property>
        </bean>
        <!-- 消息主题监听者 和 主题监听容器 可以配置多个，即多个订阅者 -->
        <!-- 消息主题监听者(Topic) -->
-       <bean id="topicMessageListener" class="TopicMessageListener" />
+       <bean id="topicMessageListener" class="com.activeMQ.TopicMessageListener" />
        <!-- 主题监听容器 （Topic） -->
        <bean id="topicJmsContainer"
              class="org.springframework.jms.listener.DefaultMessageListenerContainer">

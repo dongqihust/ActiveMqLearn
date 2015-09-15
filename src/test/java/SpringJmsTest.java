@@ -1,7 +1,10 @@
 import javax.jms.Destination;
 
 
- 
+import com.activeMQ.ConsumerServiceImpl;
+import com.activeMQ.ProducerServiceImpl;
+
+import com.activeMQ.TopicProvider;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

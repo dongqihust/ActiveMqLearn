@@ -1,7 +1,10 @@
+package com.activeMQ;
+
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
+
 /**
  *和队列监听的代码一样。
  */

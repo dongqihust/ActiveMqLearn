@@ -1,3 +1,5 @@
+package com.activeMQ;
+
 import org.springframework.jms.core.JmsTemplate;
 
 import javax.jms.Destination;

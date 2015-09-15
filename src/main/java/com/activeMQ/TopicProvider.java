@@ -1,10 +1,12 @@
+package com.activeMQ;
+
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
+
 import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
-
-import org.springframework.jms.core.JmsTemplate;
-import org.springframework.jms.core.MessageCreator;
 
 public class TopicProvider {
 

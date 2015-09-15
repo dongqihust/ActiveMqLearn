@@ -1,3 +1,5 @@
+package com.activeMQ;
+
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 
